@@ -7,12 +7,28 @@
     <!-- axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- vue -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 <body>
     <div id="app">
+        <header>
+            <div class="container">
+                <img src="./img/spotify-logo.png">
+            </div>
+        </header>
 
+        <div class="dischi-container container">
+            <div class="disco" v-for="disco in dischi">
+                <img :src="disco.poster">
+                <h3>{{disco.title}}</h3>
+                <span class="author">{{disco.author}}</span>
+                <span class="year">{{disco.year}}</span>
+            </div>
+        </div>
     </div>  
 <script src="js/main.js"></script>
 </body>

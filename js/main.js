@@ -5,7 +5,7 @@ const app = new Vue({
     },
 
     created() {
-        axios.get('http://localhost/php-ajax-dischi/server/api.php')
+        axios.get('http://localhost:8888/php-ajax-dischi/server/api.php')
         .then((response) => {
             this.dischi = response.data;
         })
